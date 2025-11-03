@@ -1,12 +1,25 @@
 // Palidroma
 // Chiedere all’utente di inserire una parola
-// Creare una funzione per capire se la parola inserita è palindroma (NON usare split, reverse e join)
+// Creare una funzione per capire se la parola inserita è palindroma 
+// (NON usare split, reverse e join)
 
 
+const promtName = prompt("Inserisci un nome");
+function isPalindroma(name) {
 
 
+    for (let i = 0; i < promtName.length / 2; i++) {
+        const currentName = promtName[i];
+        if (currentName !== promtName[promtName.length - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true
+}
 
 
+console.log(isPalindroma(promtName));
 
 
 
